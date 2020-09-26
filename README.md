@@ -12,11 +12,25 @@ RSS feed aggregator written in **python** with a little analytical twist.
 
 ## How to use (webapp)
 - Install dependecies
+```python
+pip install -r requirements.txt
+```
 - Customize config.toml
+- Edit app.py
+```python
+if __name__ == '__main__':
+    app.run(debug=True)
+    # ui.run()
+```
 - Run app.py
 
-## How to use (desktop)
+## How to use (windows)
 - Run the .exe from the release
+
+# How to compile
+```python
+pyinstaller -noconsole -onefile -n smart-RSS ./app.py
+```
 
 ## Planned features
 - Expand the analytics (insights) from  data with more functions/graphs
