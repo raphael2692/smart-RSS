@@ -31,15 +31,9 @@ from collections import Counter
 
 from wordcloud import WordCloud
 
-
 config = toml.load('config.toml')
 
-
-
 app = Flask(__name__)
-# Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
-
 ui = FlaskUI(app)
 
 def encode(sentence):
@@ -191,4 +185,4 @@ def text():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    #ui.run()
+    # ui.run() # run as standalone
