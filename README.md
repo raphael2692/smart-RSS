@@ -18,11 +18,6 @@ pip install -r requirements.txt
 - Customize config.toml
 - Run app.py
 
-# How to compile
-```python
-pyinstaller -noconsole -onefile -n smart-RSS ./app.py
-```
-
 ## Planned features
 - Expand the analytics (insights) from  data with more functions/graphs
 - Dump data to a db for further analysis
