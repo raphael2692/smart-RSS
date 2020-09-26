@@ -8,9 +8,9 @@ RSS feed aggregator written in **python** with a little analytical twist.
 - Pre-process feeds by specifying stopwords in titles
 - Plot basic text-analytics from the articles summary, titles and sources
 - Customize look and settings via .toml
-- Runs as a web-app (flask) and can be compiled and used as a desktop app (flaskwebgui)
+- Runs as a web-app (flask)
 
-## How to use (webapp)
+## How to use 
 - Install dependecies
 ```python
 pip install -r requirements.txt
@@ -24,9 +24,6 @@ if __name__ == '__main__':
 ```
 - Run app.py
 
-## How to use (windows)
-- Run the .exe from the release
-
 # How to compile
 ```python
 pyinstaller -noconsole -onefile -n smart-RSS ./app.py
@@ -35,7 +32,7 @@ pyinstaller -noconsole -onefile -n smart-RSS ./app.py
 ## Planned features
 - Expand the analytics (insights) from  data with more functions/graphs
 - Dump data to a db for further analysis
-- Provide binaries for linux
+- Compile it as a standalone app and provide binaries for win/linux
 - Enhance ux/ui
 
 
