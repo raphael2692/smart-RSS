@@ -16,12 +16,6 @@ RSS feed aggregator written in **python** with a little analytical twist.
 pip install -r requirements.txt
 ```
 - Customize config.toml
-- Edit app.py
-```python
-if __name__ == '__main__':
-    app.run(debug=True)
-    # ui.run()
-```
 - Run app.py
 
 # How to compile
