@@ -27,3 +27,6 @@ RSS feed aggregator written in **python** with a little analytical twist.
 
 # Screenshot
 ![screen1](https://github.com/raphael2692/smart-RSS/tree/master/screen/screen1.png?raw=true)
+![screen2](https://github.com/raphael2692/smart-RSS/tree/master/screen/screen2.png?raw=true)
+![screen3](https://github.com/raphael2692/smart-RSS/tree/master/screen/screen3.png?raw=true)
+![screen4](https://github.com/raphael2692/smart-RSS/tree/master/screen/screen4.png?raw=true)
