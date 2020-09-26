@@ -1,0 +1,65 @@
+database = "sqlite:///db.db"
+feed_title = "📊 Data Science"
+display_max = 500
+
+
+# themes (pick 1)
+# dark theme
+# theme = "bg-dark text-white"
+
+# light theme 
+theme = 'bg-light text-dark'
+
+# kill bill or taxist
+# theme = "bg-warning text-dark"
+
+# ocean
+# theme = "bg-info text-light"
+
+
+
+[sources]
+
+[sources.gab]
+name = "Google AI Blog"
+pre_filter = false
+stopwords = [""]
+url = "http://feeds.feedburner.com/blogspot/gJZg"
+
+[sources.mrb]
+name = "Microsoft Research Blog"
+pre_filter = false
+stopwords = [""]
+url = "https://www.microsoft.com/en-us/research/feed/"
+
+[sources.dsc]
+name = "Data Science Central"
+pre_filter = true
+stopwords = ["weekly"]
+url = "http://feeds.feedburner.com/FeaturedBlogPosts-DataScienceCentral"
+
+[sources.kdn]
+name = "KDnuggets"
+pre_filter = true
+stopwords = ["poll", "stories", "kdnuggets"]
+url = "https://www.kdnuggets.com/feed"
+
+[sources.av]
+name = "Analytics Vidhya"
+pre_filter = true
+stopwords = ["weekly"]
+url = "https://analyticsvidhya.com/feed"
+
+
+[sources.ds101]
+name = "Data Science 101"
+pre_filter = false
+stopwords = [""]
+url = "https://101.datascience.community/feed"
+
+[sources.kgl]
+name = "Kaggle Blog"
+pre_filter = false
+stopwords = [""]
+url = "https://medium.com/feed/kaggle-blog"
+

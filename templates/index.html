@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container ">
+    <div class="text-center mb-4">
+    <p class="blockquote text-center" style="display: inline;"><a href="/update" class="button {{ theme }}" onclick="$('#updating').show();">🚀
+            Update</a>
+    </p>
+   
+    <p class="blockquote text-center" style="display: inline;"><a href="/text" class="button {{ theme }}" onclick="$('#generate_insights').show();">📈
+        Insights</a>
+</p>
+</div>
+<div id="updating" style="display:none;">
+    <p class="text-center small mb-5 font-italic">Gathering data (it might take a couple minutes...)
+        <!-- <img style="display:inline;height:40px;width:40px;"
+        src="{{url_for('static', filename='rotate.gif')}}" alt="rotation icon" /></p> -->
+    </p>
+</div>
+<div id="generate_insights" style="display:none;">
+    <p class="text-center small mb-5 font-italic">Generating insights (it might take a couple minutes...)
+        <!-- <img style="display:inline;height:40px;width:40px;"
+        src="{{url_for('static', filename='rotate.gif')}}" alt="rotation icon" /></p> -->
+    </p>
+</div>
+    <div class="row mb-5">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <form method="POST" action="/filter_title">
+                <div class="input-group">
+                    <input name="word" type="text" class="form-control form-control-sm"
+                        placeholder="Filter by term in title">
+                    <div class="input-group-append">
+                        <button class="btn btn-sm bg-warning" type="submit">
+                            search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+
+
+    <div class="row ">
+        <div class="col-md-9">
+            <div class="list-group ">
+                {% for key,value in data.iterrows() %}
+                {% if loop.index <= display_limit %}
+                {% if value["source"] in active  %}
+                <a href="{{ value['url'] }}" target="_blank"
+                    class="list-group-item list-group-item-action flex-column align-items-start {{ theme }}">
+                    <div class="d-flex w-100 justify-content-between">
+                        <!-- <h5 class="mb-2">{{ " ".join(value['title'].split(' ')[:4]) }} ... </h5> -->
+                        <h5 class="mb-2">{{ value['title'].title() }}</h5>
+
+                    </div>
+                    <!-- <p class="mb-1">{{ value['incipit'] }}</p> -->
+                    <small>Source: <span class="font-italic">{{ value['source'] }}</span></small><span><small>
+                            | Published: <span class="font-italic">{{ value['date'] }}</span></small></span>
+                </a>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-3 d-sm-none d-md-block">
+            <h5 class="text-left">Active sources:</h5>
+            <ul class="list-group ">
+                {% for item in active %}
+                <li class="list-group-item d-flex justify-content-between align-items-center {{ theme }}">
+                    {{ item }}</li>
+                {% endfor %}
+                <ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+
+</html>
