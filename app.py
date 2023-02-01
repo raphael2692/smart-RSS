@@ -34,7 +34,7 @@ from wordcloud import WordCloud
 config = toml.load('config.toml')
 
 app = Flask(__name__)
-ui = FlaskUI(app)
+# ui = FlaskUI(app)
 
 def encode(sentence):
     m = hashlib.md5()
